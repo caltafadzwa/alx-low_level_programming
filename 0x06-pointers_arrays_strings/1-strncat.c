@@ -5,15 +5,23 @@
  * _strncat - that concatenates two strings
  * @src: the source of the file
  * @dest: the destination concerned
+ * @n: integer
  * Return: void
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	char dest[] = "Hello";
-	char src[] = "World!";
+	int i;
+	int j;
+
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		printf("Concatenated String: %s\n", strcat(destination, source))
+		continue;
 	}
-	return (0);
+	for (j = 0; src[j] != '\0' && j < n; j++)
+	{
+		dest[i + j] = src[j];
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }

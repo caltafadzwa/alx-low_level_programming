@@ -9,12 +9,21 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char dest[] = "Hello";
-	char src[] = "World!";
+	char *s = dest;
 
-	strcat(dest, src);
+	while (*dest != '\0')
 	{
-		printf("concetenated String; %s\n", dest);
+		dest++;
 	}
-	return (0);
+
+	while (*dest != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+
+	*dest = '\0';
+
+	return (s);
 }
